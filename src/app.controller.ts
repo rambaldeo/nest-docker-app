@@ -1,16 +1,17 @@
 import { Controller, Get, Res, Render, Post, Body } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { AppService } from './app.service';
+import { title } from 'process';
 //Need to adjust this to show the home page of the application
 //This is the main application vontroller for basic endpoints
 
 
 @ApiTags('Application')
-@Controller()
+@Controller('Ram-Docker-App')
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get('Home')
+  @Get()
   @ApiOperation({ summary: 'Render Home Page',
     description: 'Renders the home page of the application'
    })
@@ -24,6 +25,10 @@ export class AppController {
     }
    }
 
+   @Post()
+   @Render('homepage')
+
+   
    
   getHello(): string {
     return this.appService.getHello();
