@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+ 
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>{{title}}</h1>
+    <nav>
+      <a href="/nest-docker-app/Home">Home</a>
+
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to Cafe Wat Speed ☕</h2>
+    <p>
+      Enjoy handcrafted beverages, freshly baked pastries, and a cozy space to relax or work.
+      Whether you're here for a quick coffee or a deep conversation, we've got a spot for you.
+    </p>
+  </section>
+
+  <section class="features">
+    <div class="feature-card">
+      <h3>✨ Fresh Ingredients</h3>
+      <p>We use only the best locally sourced coffee beans and fresh produce to serve you quality every day.</p>
+    </div>
+    <div class="feature-card">
+      <h3>🛋 Cozy Atmosphere</h3>
+      <p>Relax, work, or catch up with friends in our warm and welcoming cafe environment.</p>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Ram Nest Docker App. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
