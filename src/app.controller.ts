@@ -7,7 +7,7 @@ import { title } from 'process';
 
 
 @ApiTags('Application')
-@Controller('Ram-Docker-App')
+@Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
